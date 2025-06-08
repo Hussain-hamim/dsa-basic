@@ -33,6 +33,17 @@ public void removeAt(int index){
     count--;
 }
 
+public int indexOf(int item){
+        // if we find it, return index
+       // otherwise, return
+    // the runtime complexity of this is O(n)
+    for (int i = 0; i < count; i++)
+        if(items[i] == item)
+            return i;
+    return -1;
+
+}
+
  public void print(){ //print method
      for (int i = 0; i < count; i++) {
         System.out.println(items[i]);

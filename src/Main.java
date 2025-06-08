@@ -19,6 +19,7 @@ public class Main {
         numbers.add(20);
         numbers.add(20);
 numbers.removeAt(2);
+        System.out.println(numbers.indexOf(10));
         numbers.print();
 
 
