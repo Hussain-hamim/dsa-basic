@@ -80,4 +80,14 @@ public class Main {
 
 // exponential growth: O(2^n) => this grow faster and faster
 // not scalable, is very slow. and is opposite of logarithmic growth
+
+ // space complexity:
+public void greet(String[] names){
+        // O(n) space
+    String[] copy = new String[names.length];
+    for (int i = 0; i < names.length; i++) {
+        System.out.println("Hi " + names[i]);
+    }
+    // we always look to the additional space size of the input
+}
 };
