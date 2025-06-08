@@ -78,6 +78,6 @@ public class Main {
     // logarithmic growth => O(log n) eg; binary search
     // an algorithm with logarithmic growth is more scalable, then linear growth one
 
-
-
+// exponential growth: O(2^n) => this grow faster and faster
+// not scalable, is very slow. and is opposite of logarithmic growth
 };
