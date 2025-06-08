@@ -1,12 +1,26 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
+
         System.out.println("Hello world!");
+        int[] numbers = new int[3];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        numbers[2] = 3;
+
+        System.out.println(Arrays.toString(numbers));
+
+
+        log(numbers);
+        arr();
+
     }
 
-    public void  log(int[] numbers){
+    public static void  log(int[] numbers){
         // O(1) => big O one
         System.out.println(numbers[0]);
-        System.out.println(numbers[0]);
+        System.out.println(numbers[1]);
     }
 
     public void  log2(int[] numbers){
@@ -89,5 +103,18 @@ public void greet(String[] names){
         System.out.println("Hi " + names[i]);
     }
     // we always look to the additional space size of the input
-}
 };
+
+
+//  ARRAY:
+// the cost of copying item from one array to another (insert) is O(n)
+// delete is also O(n)
+public static void arr(){
+        int[] numbers = new int[3];
+        System.out.println(Arrays.toString(numbers));
+
+}
+
+
+}
+
