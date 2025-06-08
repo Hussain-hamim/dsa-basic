@@ -74,4 +74,10 @@ public class Main {
         }
 
     }
+
+    // logarithmic growth => O(log n) eg; binary search
+    // an algorithm with logarithmic growth is more scalable, then linear growth one
+
+
+
 };
