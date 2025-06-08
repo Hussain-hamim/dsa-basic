@@ -4,16 +4,27 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
-        int[] numbers = new int[3];
-        numbers[0] = 1;
-        numbers[1] = 2;
-        numbers[2] = 3;
+//        int[] numbers = new int[3];
+//        numbers[0] = 1;
+//        numbers[1] = 2;
+//        numbers[2] = 3;
+//        // also same as
+//        int[]  nums = {10, 20, 30};
+//        System.out.println(Arrays.toString(nums));
 
-        System.out.println(Arrays.toString(numbers));
+        MyArray numbers = new MyArray(3);
+          numbers.add(10);
+          numbers.add(20);
+        numbers.add(30);
+        numbers.add(20);
+        numbers.add(20);
+
+        numbers.print();
 
 
-        log(numbers);
-        arr();
+
+//        log(numbers);
+//        arr();
 
     }
 
