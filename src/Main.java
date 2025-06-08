@@ -60,4 +60,18 @@ public class Main {
         }
 
     }
+
+    public void  log7(int[] numbers){
+// O(n * n * n) => O(n * n * n) => O(n^3) because the run time complexity increases cube
+        // increase cube like
+        for (int i = 0; i < numbers.length; i++){ // O(n)
+            System.out.println(numbers[i]);
+
+            for (int second : numbers) // O(n)
+                System.out.println(i + ", " + second );
+                     for (int third : numbers) // O(n)
+                         System.out.println(i + ", " + third );
+        }
+
+    }
 };
