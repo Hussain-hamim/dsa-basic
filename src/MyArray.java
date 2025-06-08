@@ -21,6 +21,18 @@ public void add(int item){
     count++;
 }
 
+public void removeAt(int index){
+        // validate index
+    if(index < 0 || index >= count){
+        throw new IllegalArgumentException();
+    }
+    // shift the items to the left to fill the hole
+    for (int i = index; i < count; i++) {
+        items[i] = items[i + 1]; // loop until the given index come then replace with next item which is i + 1
+    }
+    count--;
+}
+
  public void print(){ //print method
      for (int i = 0; i < count; i++) {
         System.out.println(items[i]);
