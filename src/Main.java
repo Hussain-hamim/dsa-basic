@@ -17,7 +17,9 @@ public class Main {
         list2.addLast(10);
         list2.addLast(20);
         list2.addLast(30);
-        System.out.println(list2.indexOf(30));
+
+//        list2.removeFirst();
+        list2.removeLast();
 
     }
 
