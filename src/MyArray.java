@@ -1,54 +1,55 @@
 public class MyArray {
     private int[] items; // private array variable
-    private  int count;
+    private int count;
 
-    public  MyArray(int length){
-        items = new int[length]; // constructor
-}
+    // constructor
+    public MyArray(int length) {
+        items = new int[length];
+    }
 
-public void add(int item){
+    public void add(int item) {
 // if array is full, resize
-    if(items.length == count){
-        // create new array (twice the size)
-        int[] newItems = new int[count * 2];
-        // copy all the existing items
-        for (int i = 0; i < count; i++)
-            newItems[i] = items[i];
+        if (items.length == count) {
+            // create new array (twice the size)
+            int[] newItems = new int[count * 2];
+            // copy all the existing items
+            for (int i = 0; i < count; i++)
+                newItems[i] = items[i];
             // set items to this new array
-        items = newItems;
+            items = newItems;
+        }
+        items[count] = item;
+        count++;
     }
-    items[count] = item;
-    count++;
-}
 
-public void removeAt(int index){
+    public void removeAt(int index) {
         // validate index
-    if(index < 0 || index >= count){
-        throw new IllegalArgumentException();
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException();
+        }
+        // shift the items to the left to fill the hole
+        for (int i = index; i < count; i++) {
+            items[i] = items[i + 1]; // loop until the given index come then replace with next item which is i + 1
+        }
+        count--;
     }
-    // shift the items to the left to fill the hole
-    for (int i = index; i < count; i++) {
-        items[i] = items[i + 1]; // loop until the given index come then replace with next item which is i + 1
-    }
-    count--;
-}
 
-public int indexOf(int item){
+    public int indexOf(int item) {
         // if we find it, return index
-       // otherwise, return
-    // the runtime complexity of this is O(n)
-    for (int i = 0; i < count; i++)
-        if(items[i] == item)
-            return i;
-    return -1;
+        // otherwise, return
+        // the runtime complexity of this is O(n)
+        for (int i = 0; i < count; i++)
+            if (items[i] == item)
+                return i;
+        return -1;
 
-}
-
- public void print(){ //print method
-     for (int i = 0; i < count; i++) {
-        System.out.println(items[i]);
     }
-}
+
+    public void print() { //print method
+        for (int i = 0; i < count; i++) {
+            System.out.println(items[i]);
+        }
+    }
 
 
 }

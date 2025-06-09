@@ -5,15 +5,19 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
+        // ArrayList - dynamic
         ArrayList<Integer> list = new ArrayList<>();
         list.add(10);
         list.add(20);
         list.add(30);
         list.remove(0);
-        System.out.println(list);
+        list.indexOf(20);
 
-        System.out.println(list.indexOf(20));
-
+        var list2 = new LinkedList();
+        list2.addLast(10);
+        list2.addLast(20);
+        list2.addLast(30);
+        System.out.println(list2.indexOf(30));
 
     }
 
