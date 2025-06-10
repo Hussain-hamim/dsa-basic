@@ -18,6 +18,12 @@ public class Main {
         list2.addLast(20);
         list2.addLast(30);
 
+        var myarr = new MyArray(3);
+        myarr.add(10);
+        myarr.add(20);
+        myarr.add(30);
+        myarr.add(50);
+        System.out.println(myarr.max());
 //        list2.removeFirst();
         list2.removeLast();
 

@@ -45,6 +45,19 @@ public class MyArray {
 
     }
 
+    public int max() {
+        if (count == 0)
+            throw new IllegalStateException("Array is empty");
+
+        int max = items[0];
+        for (int i = 1; i < count; i++) {
+            if (items[i] > max)
+                max = items[i];
+        }
+        return max;
+    }
+
+
     public void print() { //print method
         for (int i = 0; i < count; i++) {
             System.out.println(items[i]);
