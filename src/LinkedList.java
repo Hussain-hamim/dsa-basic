@@ -137,12 +137,18 @@ public class LinkedList {
     public int getKthFromTheEnd(int k) {
         // [10 -> 20 -> 30 -> 40 -> 50]
         //  *           *
+
+        if (isEmpty())
+            throw new IllegalStateException();
+
         var a = first;
         var b = first;
 
         // b should be k - 1 node apart
         for (int i = 0; i < k - 1; i++) {
             b = b.next;
+            if (b == null)
+                throw new IllegalArgumentException();
         }
 
         // we move both pointer ahead until b is at the end
