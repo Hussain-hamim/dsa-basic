@@ -1,43 +1,17 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        // ArrayList - dynamic
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.remove(0);
-        list.indexOf(20);
 
-        var list2 = new LinkedList();
-        list2.addLast(10);
-        list2.addLast(20);
-        list2.addLast(30);
+        var list = new LinkedList();
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        var arr = list.toArray();
+        System.out.println(Arrays.toString(arr));
 
-        var myarr = new MyArray(8);
-        myarr.add(10);
-        myarr.add(20);
-        myarr.add(30);
-        myarr.add(30);
-        myarr.add(50);
-        myarr.insertAt(500, 1);
-//        myarr.print();
-
-        var myarr2 = new MyArray(3);
-        myarr.add(10);
-        myarr.add(20);
-        myarr.add(40);
-        myarr.add(30);
-        myarr.add(60);
-//        System.out.println(myarr.max());
-        myarr.intersect(myarr2).print();
-//        myarr2.print();
-//        list2.removeFirst();
-        list2.removeLast();
 
     }
 
