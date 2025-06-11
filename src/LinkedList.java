@@ -96,6 +96,7 @@ public class LinkedList {
         return size; //O(1)
     }
 
+
     public int[] toArray() {
         int[] array = new int[size];
         var current = first;
@@ -105,6 +106,32 @@ public class LinkedList {
             current = current.next;
         }
         return array;
+    }
+
+
+    public void reverse() {
+        // [10 <- 20 <- 30]
+        //  p     c      n
+        ///////// p      c      n
+        ///////////////  p     c      n
+
+        if (isEmpty()) return;
+
+        // changing direction of the links
+        var previous = first;
+        var current = first.next;
+        while (current != null) { // in the last iteration the current will be null
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        // here we set last and first field
+        last = first;
+        last.next = null;
+        first = previous;
+
     }
 
     private Node getPrevious(Node node) {
