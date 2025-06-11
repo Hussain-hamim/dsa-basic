@@ -113,7 +113,7 @@ public class LinkedList {
         // [10 <- 20 <- 30]
         //  p     c      n
         ///////// p      c      n
-        ///////////////  p     c      n
+        ///////////////  p      c      n
 
         if (isEmpty()) return;
 
@@ -121,9 +121,9 @@ public class LinkedList {
         var previous = first;
         var current = first.next;
         while (current != null) { // in the last iteration the current will be null
-            var next = current.next;
-            current.next = previous;
-            previous = current;
+            var next = current.next; // the link between 20 and 30
+            current.next = previous; // point 20 link to 10
+            previous = current; // reverse 20 with 10
             current = next;
         }
 
@@ -131,7 +131,27 @@ public class LinkedList {
         last = first;
         last.next = null;
         first = previous;
+    }
 
+
+    public int getKthFromTheEnd(int k) {
+        // [10 -> 20 -> 30 -> 40 -> 50]
+        //  *           *
+        var a = first;
+        var b = first;
+
+        // b should be k - 1 node apart
+        for (int i = 0; i < k - 1; i++) {
+            b = b.next;
+        }
+
+        // we move both pointer ahead until b is at the end
+        while (b != last) {
+            a = a.next;
+            b = b.next;
+        }
+        // then we return first pointer
+        return a.value;
     }
 
     private Node getPrevious(Node node) {

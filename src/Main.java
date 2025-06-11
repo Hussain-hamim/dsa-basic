@@ -9,9 +9,11 @@ public class Main {
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);
-        list.reverse();
-        var arr = list.toArray();
-        System.out.println(Arrays.toString(arr));
+        list.addLast(40);
+        list.addLast(50);
+        var arr = list.getKthFromTheEnd(3);
+        System.out.println(arr);
+        //        System.out.println(Arrays.toString(arr));
 
 
     }
