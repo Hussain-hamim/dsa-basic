@@ -18,12 +18,14 @@ public class Main {
         list2.addLast(20);
         list2.addLast(30);
 
-        var myarr = new MyArray(3);
+        var myarr = new MyArray(8);
         myarr.add(10);
         myarr.add(20);
         myarr.add(30);
         myarr.add(30);
         myarr.add(50);
+        myarr.insertAt(500, 1);
+//        myarr.print();
 
         var myarr2 = new MyArray(3);
         myarr.add(10);
@@ -32,8 +34,8 @@ public class Main {
         myarr.add(30);
         myarr.add(60);
 //        System.out.println(myarr.max());
-        myarr.intersect(myarr2);
-        myarr2.print();
+        myarr.intersect(myarr2).print();
+//        myarr2.print();
 //        list2.removeFirst();
         list2.removeLast();
 

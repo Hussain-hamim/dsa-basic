@@ -94,7 +94,7 @@ public class MyArray {
         }
 
         for (int i = count - 1; i >= index; i--) {
-            items[i + 1] = items[i];
+            items[i + 1] = items[i]; // with this we bring the substitute item forward and enlarge array with count++
         }
 
         items[index] = item;

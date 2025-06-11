@@ -3,6 +3,8 @@ import java.util.NoSuchElementException;
 public class LinkedList {
     private Node first;
     private Node last;
+    private int size;
+
 
     // addLast
     public void addLast(int item) {
@@ -15,6 +17,7 @@ public class LinkedList {
             last.next = node;
             last = node;
         }
+        size++;
     }
 
     // addFirst
@@ -27,6 +30,7 @@ public class LinkedList {
             node.next = first;
             first = node;
         }
+        size++;
     }
 
     // indexOf
@@ -66,6 +70,8 @@ public class LinkedList {
         var second = first.next;
         first.next = null;
         first = second;
+
+        size--;
     }
 
     public void removeLast() {
@@ -81,6 +87,13 @@ public class LinkedList {
         var previous = getPrevious(last);
         last = previous;
         last.next = null;
+
+        size--;
+
+    }
+
+    public int size() {
+        return size;
     }
 
     private Node getPrevious(Node node) {
