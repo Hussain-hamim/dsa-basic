@@ -23,7 +23,6 @@ public class LinkedList {
 
         if (isEmpty()) {
             first = last = node;
-
         } else {
             node.next = first;
             first = node;

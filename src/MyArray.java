@@ -57,6 +57,31 @@ public class MyArray {
         return max;
     }
 
+    public MyArray intersect(MyArray other) {
+        MyArray common = new MyArray(count);
+
+        for (int i = 0; i < count; i++) {
+            if (other.indexOf(items[i]) != -1)
+                common.add(items[i]);
+        }
+
+        return common;
+    }
+
+    public void reverse() {
+        int start = 0;
+        int end = count - 1;
+
+        while (start < end) {
+            int temp = items[start];
+            items[start] = items[end];
+            items[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
+
 
     public void print() { //print method
         for (int i = 0; i < count; i++) {
