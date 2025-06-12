@@ -160,6 +160,29 @@ public class LinkedList {
         return a.value;
     }
 
+    public void printMiddle() {
+        // [10 -> 20 -> 30 -> 40 -> 50]
+        // **
+        //        *      *
+        //              (*)            *
+
+        var a = first;
+        var b = first;
+
+        while (b != last && b.next != last) {
+            a = a.next;
+            b = b.next.next; // two steps
+        }
+
+        if (b == last) {
+
+            System.out.println(a.value);
+        } else {
+            System.out.println(a.value + ", " + a.next.value);
+        }
+        ;
+    }
+
     private Node getPrevious(Node node) {
         var current = first;
         while (current != null) {
