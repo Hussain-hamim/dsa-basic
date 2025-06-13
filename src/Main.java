@@ -1,23 +1,18 @@
 import java.util.Arrays;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-
-        var list = new LinkedList();
-        list.addLast(10);
-        list.addLast(20);
-        list.addLast(30);
-        list.addLast(40);
-        list.addLast(50);
-        list.addLast(60);
-
-        list.printMiddle();
-
-//        var arr = list.printMiddle();
-//        System.out.println(arr);
-//                System.out.println(Arrays.toString(arr));
+        Stack<Integer> stack = new Stack<>();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        System.out.println(stack);
+        var top = stack.pop();
+        System.out.println(top);
+        System.out.println(stack);
 
     }
 

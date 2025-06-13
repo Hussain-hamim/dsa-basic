@@ -162,9 +162,9 @@ public class LinkedList {
 
     public void printMiddle() {
         // [10 -> 20 -> 30 -> 40 -> 50]
-        // **
+        //  **
         //        *      *
-        //              (*)            *
+        //              (*)          *
 
         var a = first;
         var b = first;
@@ -175,12 +175,10 @@ public class LinkedList {
         }
 
         if (b == last) {
-
             System.out.println(a.value);
         } else {
-            System.out.println(a.value + ", " + a.next.value);
+            System.out.println(a.value + ", " + a.next.value); // this is when size is even
         }
-        ;
     }
 
     private Node getPrevious(Node node) {
