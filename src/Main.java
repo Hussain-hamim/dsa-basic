@@ -1,17 +1,10 @@
 import java.util.Arrays;
-import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        Stack<Integer> stack = new Stack<>();
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        System.out.println(stack);
-        var top = stack.pop();
-        System.out.println(top);
+        var stack = new StringReverser().reverse("ABC");
         System.out.println(stack);
 
     }
