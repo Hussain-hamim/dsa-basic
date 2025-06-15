@@ -11,19 +11,30 @@ public class Expression {
         Stack<Character> stack = new Stack<>();
 
         for (char ch : input.toCharArray()) {
-            if (ch == '(' || ch == '<' || ch == '[' || ch == '{')
+            if (isLeftBracket(ch))
                 stack.push(ch);
-            else if (ch == ')' || ch == '>' || ch == ']' || ch == '}') {
+            else if (isRightBracket(ch)) {
                 if (stack.empty()) return false;
                 var top = stack.pop();
-                if ((ch == ')' && top != '(') ||
-                        (ch == '>' && top != '<') ||
-                        (ch == ']' && top != '[') ||
-                        (ch == '}' && top != '{')
-                ) return false;
+                if (bracketMatch(top, ch)) return false;
             }
         }
 
         return stack.empty();
+    }
+
+    private boolean isLeftBracket(char ch) {
+        return ch == '(' || ch == '<' || ch == '[' || ch == '{';
+    }
+
+    private boolean isRightBracket(char ch) {
+        return ch == ')' || ch == '>' || ch == ']' || ch == '}';
+    }
+
+    private boolean bracketMatch(char left, char right) {
+        return (right == ')' && left != '(') ||
+                (right == '>' && left != '<') ||
+                (right == ']' && left != '[') ||
+                (right == '}' && left != '{');
     }
 }
