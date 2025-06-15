@@ -15,8 +15,9 @@ public class Expression {
                 stack.push(ch);
             else if (isRightBracket(ch)) {
                 if (stack.empty()) return false;
+
                 var top = stack.pop();
-                if (bracketMatch(top, ch)) return false;
+                if (bracketNotMatch(top, ch)) return false;
             }
         }
 
@@ -31,7 +32,7 @@ public class Expression {
         return ch == ')' || ch == '>' || ch == ']' || ch == '}';
     }
 
-    private boolean bracketMatch(char left, char right) {
+    private boolean bracketNotMatch(char left, char right) {
         return (right == ')' && left != '(') ||
                 (right == '>' && left != '<') ||
                 (right == ']' && left != '[') ||

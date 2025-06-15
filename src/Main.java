@@ -4,9 +4,13 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        var exp = new Expression();
-        var one = exp.isBalanced("[1+2]");
-        System.out.println(one);
+        var stack = new Stack();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+//        stack.pop();
+//        stack.print();
+        System.out.println(stack.peek());
 
     }
 
