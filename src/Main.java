@@ -5,7 +5,7 @@ public class Main {
         System.out.println("Hello world!");
 
         var exp = new Expression();
-        var one = exp.isBalanced(")1+2(");
+        var one = exp.isBalanced("[1+2]");
         System.out.println(one);
 
     }
