@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        var stack = new StringReverser().reverse("ABC");
-        System.out.println(stack);
+        var exp = new Expression();
+        var one = exp.isBalanced(")1+2(");
+        System.out.println(one);
 
     }
 

@@ -11,7 +11,6 @@ public class StringReverser {
 
         for (int i = 0; i < input.length(); i++) {
             stack.push(input.charAt(i));
-
         }
         while (!stack.empty())
             reverseString += stack.pop();
