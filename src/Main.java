@@ -1,23 +1,23 @@
-import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Queue;
 import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("Hello DSA!");
 
         // interface/contract --- implementation
-        Queue<Integer> queue = new ArrayDeque<>();
+        var queue = new ArrayQueue(5);
 
 
-        queue.add(10);
-        queue.add(20);
-        queue.add(30);
-        queue.add(40);
-        queue.add(50);
+        queue.enqueue(90);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.enqueue(50);
+        queue.dequeue();
+        queue.dequeue();
 
-        reverse(queue);
         System.out.println(queue);
 
     }
