@@ -1,18 +1,13 @@
 import java.util.Arrays;
 
 public class Stack {
-    //push, pop, peek, isEmpty, int[]
-    // [10, 0, 0, 0, 0]
-    //count = 1;
-    // push(20);
-    //array[count] = 20;
-
     private int[] items = new int[5];
     private int count;
 
     public void push(int item) {
         if (count == items.length)
             throw new StackOverflowError();
+
         items[count] = item;
         count++;
     }
@@ -28,6 +23,7 @@ public class Stack {
     public int peek() {
         if (count == 0)
             throw new IllegalStateException();
+
         return items[count - 1];
     }
 
@@ -35,6 +31,15 @@ public class Stack {
         return count == 0;
     }
 
+    public int min() {
+        int min = items[0];
+        for (int i = 0; i < count; i++) {
+            if (items[i] < min) {
+                min = items[i];
+            }
+        }
+        return min;
+    }
 
     public void print() {
         var content = Arrays.copyOfRange(items, 0, count);
