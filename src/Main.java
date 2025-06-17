@@ -6,16 +6,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello DSA!");
 
-        StackQueue q = new StackQueue();
-        q.enqueue(10);
-        q.enqueue(20);
-        q.enqueue(30);
+        PriorityQueue q = new PriorityQueue();
+        q.add(30);
+        q.add(20);
+        q.add(10);
+        q.add(50);
+        q.add(15);
         System.out.println(q);
-        
-        System.out.println(q.dequeue()); // 10
-        System.out.println(q.dequeue()); // 20
-        q.enqueue(40);
-        System.out.println(q.dequeue()); // 30
+        while (!q.isEmpty())
+            System.out.println(q.remove());
 
 
     }
