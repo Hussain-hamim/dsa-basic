@@ -7,18 +7,19 @@ public class Main {
         System.out.println("Hello DSA!");
 
         // interface/contract --- implementation
-        var queue = new ArrayQueue(5);
-
-
-        queue.enqueue(90);
+        ArrayQueue queue = new ArrayQueue(5);
+        queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
+        System.out.println(queue); // [10, 20, 30, 0, 0]
+
+        queue.dequeue(); // returns 10
+        System.out.println(queue); // [0, 20, 30, 0, 0]
+
         queue.enqueue(40);
         queue.enqueue(50);
-        queue.dequeue();
-        queue.dequeue();
-
-        System.out.println(queue);
+        queue.enqueue(60); // wraps around
+        System.out.println(queue); // [60, 20, 30, 40, 50]
 
     }
 
