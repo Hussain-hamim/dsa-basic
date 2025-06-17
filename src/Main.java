@@ -6,20 +6,17 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello DSA!");
 
-        // interface/contract --- implementation
-        ArrayQueue queue = new ArrayQueue(5);
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
-        System.out.println(queue); // [10, 20, 30, 0, 0]
+        StackQueue q = new StackQueue();
+        q.enqueue(10);
+        q.enqueue(20);
+        q.enqueue(30);
+        System.out.println(q);
+        
+        System.out.println(q.dequeue()); // 10
+        System.out.println(q.dequeue()); // 20
+        q.enqueue(40);
+        System.out.println(q.dequeue()); // 30
 
-        queue.dequeue(); // returns 10
-        System.out.println(queue); // [0, 20, 30, 0, 0]
-
-        queue.enqueue(40);
-        queue.enqueue(50);
-        queue.enqueue(60); // wraps around
-        System.out.println(queue); // [60, 20, 30, 40, 50]
 
     }
 

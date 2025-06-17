@@ -31,6 +31,11 @@ public class ArrayQueue {
         return item;
     }
 
+//    Time Complexity:
+//    enqueue(): O(1) - constant time operation
+//    dequeue(): O(1) - constant time operation
+
+
     @Override
     public String toString() {
         return Arrays.toString(items);
