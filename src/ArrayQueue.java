@@ -1,17 +1,6 @@
 import java.util.Arrays;
 
 public class ArrayQueue {
-    // arrayqueue (arrayDeque)
-    // enqueue
-    // dequeue
-    //peek
-    // isEmpty
-    //isFull
-    // [10, 20, 30, 40, 50]
-    //   F               R
-    // pointers
-    // F= 0
-    // R = 4
     private int[] items;
     private int rear;
     private int front;
@@ -39,8 +28,6 @@ public class ArrayQueue {
 
     @Override
     public String toString() {
-//        var content = Arrays.copyOfRange(items, 0, count);
-//        return Arrays.toString(content);
         return Arrays.toString(items);
     }
 }
