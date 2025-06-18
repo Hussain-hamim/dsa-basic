@@ -1,3 +1,4 @@
+import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Queue;
 import java.util.Stack;
@@ -6,16 +7,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello DSA!");
 
-        PriorityQueue q = new PriorityQueue();
+        Queue<Integer> q = new ArrayDeque<>();
         q.add(30);
         q.add(20);
         q.add(10);
         q.add(50);
         q.add(15);
         System.out.println(q);
-        while (!q.isEmpty())
-            System.out.println(q.remove());
 
+        QueueReverser qr = new QueueReverser();
+        qr.reverse(q, 3);// after revering 3 element
+
+        System.out.println(q);
 
     }
 
