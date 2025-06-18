@@ -1,21 +1,16 @@
+import java.util.Arrays;
+import java.util.Queue;
 import java.util.Stack;
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello DSA!");
 
-        Map<Integer, String> map = new HashMap<>();
-        map.put(1, "Hussain");
-        map.put(2, "Hamza");
-        map.put(3, "Sumya");
-        System.out.println(map);
+        CharFinder map = new CharFinder();
+        var one = map.findFirstNonRepeatingChar("something nice");
+        System.out.println(one);
 
-        // iterating over hashmap
-        for (var item : map.entrySet()) {
-            System.out.println(item.getKey());
-            System.out.println(item.getValue());
-        }
+        // find first none repeatable character in a string
 
     }
 
