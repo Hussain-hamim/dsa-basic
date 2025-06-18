@@ -1,24 +1,21 @@
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Queue;
 import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello DSA!");
 
-        Queue<Integer> q = new ArrayDeque<>();
-        q.add(30);
-        q.add(20);
-        q.add(10);
-        q.add(50);
-        q.add(15);
-        System.out.println(q);
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "Hussain");
+        map.put(2, "Hamza");
+        map.put(3, "Sumya");
+        System.out.println(map);
 
-        QueueReverser qr = new QueueReverser();
-        qr.reverse(q, 3);// after revering 3 element
-
-        System.out.println(q);
+        // iterating over hashmap
+        for (var item : map.entrySet()) {
+            System.out.println(item.getKey());
+            System.out.println(item.getValue());
+        }
 
     }
 
