@@ -1,16 +1,15 @@
-import java.util.Arrays;
-import java.util.Queue;
 import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello DSA!");
 
-        CharFinder map = new CharFinder();
-        var one = map.findFirstNonRepeatingChar("something nice");
-        System.out.println(one);
-
-        // find first none repeatable character in a string
+        Set<Integer> set = new HashSet<>();
+        int[] numbers = {1, 2, 3, 3, 5, 1};
+        for (var no : numbers)
+            set.add(no);
+        System.out.println(set);
 
     }
 

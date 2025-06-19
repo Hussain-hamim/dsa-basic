@@ -4,6 +4,7 @@ import java.util.Map;
 public class CharFinder {
 
     public char findFirstNonRepeatingChar(String str) {
+        // "Hello World" -> H
         Map<Character, Integer> map = new HashMap<>();
 
         for (var ch : str.toCharArray()) {
