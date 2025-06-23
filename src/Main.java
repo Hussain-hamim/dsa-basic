@@ -3,14 +3,13 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello DSA!");
+        System.out.println("DSA!!!!!!!!!!!!");
 
         Set<Integer> set = new HashSet<>();
         int[] numbers = {1, 2, 3, 3, 5, 1};
         for (var no : numbers)
             set.add(no);
         System.out.println(set);
-
     }
 
     public static void reverse(Queue<Integer> queue) {
