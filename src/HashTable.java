@@ -21,6 +21,19 @@ public class HashTable {
         bucket.addLast(entry); // get the linkedlist at index position and add the entry object
     }
 
+    public String get(int key) {
+        var index = hash(key);
+        var bucket = entries[index];
+        if (bucket != null) {
+            for (var entry : bucket) {
+                if (entry.key == key) {
+                    return entry.value;
+                }
+            }
+        }
+        return null;
+    }
+
     private int hash(int key) {
         return key % entries.length; // whatever key we have we reduce it to the size of our array
     }
